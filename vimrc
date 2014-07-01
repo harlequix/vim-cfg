@@ -30,7 +30,9 @@ filetype plugin indent on    " required
 "
 " Setting global YCM config
 let g:ycm_global_ycm_extra_conf = '/home/jack/.vim/ycm_cfg.py'
-
+"Showing line numbers
+set nu
+"Compat script for Ulitsnips and YouCompleteMe
 function! g:UltiSnips_Complete()
     call UltiSnips#ExpandSnippet()
     if g:ulti_expand_res == 0
