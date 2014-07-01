@@ -8,13 +8,14 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-"YouCompleteMe Plugin
+" YouCompleteMe Plugin
 Plugin 'Valloric/YouCompleteMe'
-" Track the engine.
+" UltiSnips.
  Plugin 'SirVer/ultisnips'
-"
-" " Snippets are separated from the engine. Add this if you want them:
+" Snippets for UltiSnips
  Plugin 'honza/vim-snippets'
+" TagBar
+Plugin 'majutsushi/tagbar'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -30,8 +31,13 @@ filetype plugin indent on    " required
 "
 " Setting global YCM config
 let g:ycm_global_ycm_extra_conf = '/home/jack/.vim/ycm_cfg.py'
-"Showing line numbers
+" Showing line numbers
 set nu
+" Remap for TagBar
+nmap <F8> :TagbarToggle<CR>
+
+
+
 "Compat script for Ulitsnips and YouCompleteMe
 function! g:UltiSnips_Complete()
     call UltiSnips#ExpandSnippet()
