@@ -16,6 +16,10 @@ Plugin 'Valloric/YouCompleteMe'
  Plugin 'honza/vim-snippets'
 " TagBar
 Plugin 'majutsushi/tagbar'
+" NerdTree
+Plugin 'scrooloose/nerdtree.git'
+" DelimitMate
+Plugin 'Raimondi/delimitMate'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -35,9 +39,10 @@ let g:ycm_global_ycm_extra_conf = '/home/jack/.vim/ycm_cfg.py'
 set nu
 " Remap for TagBar
 nmap <F8> :TagbarToggle<CR>
-
-
-
+" Remap for NerdTree
+nmap <silent> <F9> :NERDTreeToggle<CR>
+" Colorscheme
+colorscheme twilight256
 "Compat script for Ulitsnips and YouCompleteMe
 function! g:UltiSnips_Complete()
     call UltiSnips#ExpandSnippet()
