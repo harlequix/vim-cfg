@@ -6,8 +6,7 @@
  *                return a pointer.
  * =====================================================================================
  */
-  double**
-calloc_double_matrix ( int rows, int columns )
+double** calloc_double_matrix ( int rows, int columns )
 {
   int      i;
   double **m;
@@ -26,8 +25,7 @@ calloc_double_matrix ( int rows, int columns )
  *  Description:  Free a dynamic double-matrix.
  * =====================================================================================
  */
-  double**
-free_double_matrix ( double **m )
+double** free_double_matrix ( double **m )
 {
   free(*m);                                       /* free data array            */
   free( m);                                       /* free pointer array         */

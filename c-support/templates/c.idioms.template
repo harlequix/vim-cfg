@@ -5,11 +5,11 @@
  *  Description:  
  * =====================================================================================
  */
-void<CURSOR>
-|FUNCTION_NAME| ( <+argument_list+> )
+void |FUNCTION_NAME| ( <+argument_list+> )
 {
 <SPLIT>	return <+return_value+>;
-}		/* -----  end of function |FUNCTION_NAME|  ----- */
+}
+/* -----  end of function |FUNCTION_NAME|  ----- */
 == Idioms.function-static == map:isf, shortcut:t  ==
 /* 
  * ===  FUNCTION  ======================================================================
@@ -17,11 +17,11 @@ void<CURSOR>
  *  Description:  
  * =====================================================================================
  */
-static void<CURSOR>
-|FUNCTION_NAME| ( <+argument_list+> )
+static void |FUNCTION_NAME| ( <+argument_list+> )
 {
 <SPLIT>	return <+return_value+>;
-}		/* -----  end of static function |FUNCTION_NAME|  ----- */
+}
+/* -----  end of static function |FUNCTION_NAME|  ----- */
 == Idioms.main == map:im, shortcut:m  ==
 #include	<stdlib.h>
 
@@ -31,11 +31,11 @@ static void<CURSOR>
  *  Description:  
  * =====================================================================================
  */
-int
-main ( int argc, char *argv[] )
+int main ( int argc, char *argv[] )
 {<CURSOR>
 <SPLIT>	return EXIT_SUCCESS;
-}				/* ----------  end of function main  ---------- */
+}
+/* ----------  end of function main  ---------- */
 == Idioms.enum == map:ie, shortcut:e  ==
 enum |?ENUM_NAME| {<CURSOR>
 <SPLIT>};				/* ----------  end of enum |ENUM_NAME|  ---------- */

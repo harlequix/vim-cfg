@@ -5,8 +5,7 @@
  *  Description:  Allocate a dynamic int-matrix of size rows*columns; return a pointer.
  * =====================================================================================
  */
-int**
-calloc_int_matrix ( int rows, int columns )
+int** calloc_int_matrix ( int rows, int columns )
 {
   int   i;
   int **m;
@@ -25,8 +24,7 @@ calloc_int_matrix ( int rows, int columns )
  *  Description:  Free a dynamic int-matrix.
  * =====================================================================================
  */
-int**
-free_int_matrix ( int **m )
+int** free_int_matrix ( int **m )
 {
   free(*m);                                     /* free data array            */
   free( m);                                     /* free pointer array         */
