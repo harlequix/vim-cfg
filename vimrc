@@ -66,28 +66,11 @@ let g:syntastic_warning_symbol = '!'
 " Autosessions
 let g:session_autosave="yes"
 "Compat script for Ulitsnips and YouCompleteMe
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+"let g:UltiSnipsExpandTrigger="<_>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-e>"
-"let g:UltiSnipsExpandTrigger="<c-j>"
-" this mapping Enter key to <C-y> to chose the current highlight item 
-" and close the selection list, same as other IDEs.
-" CONFLICT with some plugins like tpope/Endwise
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
+"let UltiSnipsSnippetsDirectories=["UltiSnips"]
 "Setting wrapping around for git commit messages at 72 c/line and spelling
 autocmd Filetype gitcommit setlocal spell textwidth=72
